@@ -1,0 +1,32 @@
+﻿@using printing.Resources
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = Resources.Index_cshtml_Execute_Home_Page;
+}
+
+<div style="text-align: center" class="jumbotron">
+@if (Request.IsAuthenticated)
+{
+    
+    <h2>
+        @Resources.Hello @User.Identity.GetUserName()!  
+    </h2>
+    <p>
+        @Resources.ClickTheFormAboveToGetStarted
+    </p>
+            
+    
+}
+else
+{
+
+    <h2>@Resources.Hello @Resources.Stranger!</h2>
+    <p>
+    @Html.ActionLink(Resources._LoginPartial_cshtml_Execute_Register, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+     @Resources.Or
+    @Html.ActionLink(Resources._LoginPartial_cshtml_Execute_Log_in, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+    @Resources.ToContinue
+    </p>
+
+}</div>

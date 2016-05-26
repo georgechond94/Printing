@@ -1,0 +1,11 @@
+﻿@using printing.Resources
+@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = Resources.Error_cshtml_Execute_Error;
+    ViewBag.Details = Resources.Error_cshtml_Execute_An_error_occurred_while_processing_your_request_;
+}
+
+<h1 class="text-danger">@ViewBag.Title</h1>
+<h2 class="text-danger">@ViewBag.Details.</h2>
+

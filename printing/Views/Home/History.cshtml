@@ -1,0 +1,75 @@
+﻿@using System.Collections
+@using printing.Models
+@using printing.Enums
+@using printing.Resources
+@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.Owin
+
+
+@{
+    ViewBag.Title = Resources.History;
+    ViewBag.Description = Resources.HistoryDescription;
+}
+<h2>@ViewBag.Title.</h2>
+
+<p>@ViewBag.Description</p>
+<div class="row">
+    <div class="col-md-12">
+        <section id="serviceAllForm">
+
+                <hr/>
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading"><h4>@Resources.CompletedPrints</h4></div>
+                    <!-- Table -->
+                    <table class="table table-hover">
+                        <thead>
+
+                            <tr>
+                                <td>#</td>
+                                <td>@Resources.FormViewModel_Field2_Field2</td>
+                                <td>@Resources.FormViewModel_Field3_Field3</td>
+                                <td>@Resources.FormViewModel_PrintPriority_Priority</td>
+                                <td>@Resources.FormViewModel_Mass_Mass__1_60_</td>
+                                <td>@Resources.User</td>
+                                <td>@Resources.Actions</td>
+                            </tr>
+                        </thead>
+                        @foreach (PrintViewModel print in ViewBag.HistoryPrints)
+                        {
+                            var ownid = print.GetOwnerId();
+                            var usname = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(ownid).UserName;
+
+                            <tr>
+                                <td>@print.ID</td>
+                                <td>@print.Title</td>
+                                <td>@print.Description</td>
+                                <td>@print.PrintPriority</td>
+                                <td>@print.Mass</td>
+                                <td>@usname</td>
+                                <td>
+                                    <a class="btn btn-primary" href="@Url.Action("Details", "Home",new {id=print.ID})"><i class="fa fa-user fa-fw"></i> @Resources.Details </a>
+                                </td>
+                            </tr>
+
+
+                        }
+
+                    </table>
+                </div>
+@using (Html.BeginForm("ServiceAll", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+            {
+    @Html.AntiForgeryToken()
+                    <hr />
+                    <h4>@Resources.Get_All_Prints</h4>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="@Resources.Get" class="btn btn-default" />
+                        </div>
+                    </div>
+            }
+        </section>
+    </div>
+
+</div>

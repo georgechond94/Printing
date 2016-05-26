@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FormViewModel_ID_Please_enter_a_valid_integer_number_" xml:space="preserve">
+    <value>Please enter a valid integer number.</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="FormViewModel_Mass_Mass__1_60_" xml:space="preserve">
+    <value>Mass (1-60)</value>
+  </data>
+  <data name="FormViewModel_Mass_Please_enter_a_valid_integer_number_" xml:space="preserve">
+    <value>Please enter a valid integer number.</value>
+  </data>
+  <data name="FormViewModel_Field2_Field2" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="FormViewModel_Field3_Field3" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="FormViewModel_PrintPriority_Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="FormViewModel_File_File" xml:space="preserve">
+    <value>File (.PNG)</value>
+  </data>
+  <data name="Service_cshtml_Execute_Service" xml:space="preserve">
+    <value>Prints</value>
+  </data>
+  <data name="Service_cshtml_Execute_Use_this_area_to_get_a_print_by_its_id_or_get_all_prints_" xml:space="preserve">
+    <value>Use this area to view your active prints.</value>
+  </data>
+  <data name="Get" xml:space="preserve">
+    <value>Get</value>
+  </data>
+  <data name="Get_All_Prints" xml:space="preserve">
+    <value>Get all completed prints as XML</value>
+  </data>
+  <data name="Please_Fill_The_Boxes_Below" xml:space="preserve">
+    <value>Please fill the boxes below.</value>
+  </data>
+  <data name="HomeController_Form_Print_successfully_saved__You_can_invoke_the_Service_with_your_ID__" xml:space="preserve">
+    <value>Print successfully saved! You can find more details about that print in your mailbox.</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Prints History</value>
+  </data>
+  <data name="HomeController_Form_An_error_occurred_with_form_validation__Please_try_again_" xml:space="preserve">
+    <value>An error occurred with form validation. Please try again.</value>
+  </data>
+  <data name="Form_cshtml_Execute_Form" xml:space="preserve">
+    <value>Printing Form</value>
+  </data>
+  <data name="Form_cshtml_Execute_Use_this_area_to_insert_a_print_" xml:space="preserve">
+    <value>Use this area to insert a print.</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>3d Printing Prints</value>
+  </data>
+  <data name="_LoginPartial_cshtml_Execute_Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="_LoginPartial_cshtml_Execute_Log_in" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Error_cshtml_Execute_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Error_cshtml_Execute_An_error_occurred_while_processing_your_request_" xml:space="preserve">
+    <value>An error occurred while processing your request.</value>
+  </data>
+  <data name="Index_cshtml_Execute_Home_Page" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="ClickTheFormAboveToGetStarted" xml:space="preserve">
+    <value>Click the Printing Form above to get started.</value>
+  </data>
+  <data name="CreateANewAccount" xml:space="preserve">
+    <value>Create a new account.</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="RegisterAsANewUser" xml:space="preserve">
+    <value>Register as a new user</value>
+  </data>
+  <data name="Stranger" xml:space="preserve">
+    <value>stranger</value>
+  </data>
+  <data name="ToContinue" xml:space="preserve">
+    <value>to continue.</value>
+  </data>
+  <data name="UseALocalAccountToLogIn" xml:space="preserve">
+    <value>Use a local account to log in.</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="LoginViewModel_Email_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="LoginViewModel_Password_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="LoginViewModel_RememberMe_Remember_me_" xml:space="preserve">
+    <value>Remember me?</value>
+  </data>
+  <data name="RegisterViewModel_Email_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="RegisterViewModel_Password_The__0__must_be_at_least__2__characters_long_" xml:space="preserve">
+    <value>The {0} must be at least {2} characters long.</value>
+  </data>
+  <data name="RegisterViewModel_Password_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RegisterViewModel_ConfirmPassword_Confirm_password" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="RegisterViewModel_ConfirmPassword_The_password_and_confirmation_password_do_not_match_" xml:space="preserve">
+    <value>The password and confirmation password do not match.</value>
+  </data>
+  <data name="HistoryDescription" xml:space="preserve">
+    <value>Use this area to view your past prints.</value>
+  </data>
+  <data name="FileError" xml:space="preserve">
+    <value>An error occurred with the selected file. Please provide a valid .PNG file and try again.</value>
+  </data>
+  <data name="ActivePrints" xml:space="preserve">
+    <value>Active Prints</value>
+  </data>
+  <data name="CompletedPrints" xml:space="preserve">
+    <value>Completed Prints</value>
+  </data>
+  <data name="PlaceInQueue" xml:space="preserve">
+    <value>Place in queue</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="TimeToStart" xml:space="preserve">
+    <value>Starts in / Remaining (minutes)</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Forgotyourpassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="PausedPrints" xml:space="preserve">
+    <value>Paused Prints</value>
+  </data>
+  <data name="FormViewModel_PostedDate" xml:space="preserve">
+    <value>Posted Date</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="GetPrintAsXML" xml:space="preserve">
+    <value>Get this Print as XML</value>
+  </data>
+  <data name="Demo" xml:space="preserve">
+    <value>Service Demo</value>
+  </data>
+</root>

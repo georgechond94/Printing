@@ -1,0 +1,311 @@
+﻿@using System.Collections
+@using printing.Models
+@using printing.Enums
+@using printing.Resources
+@using Microsoft.AspNet.Identity
+@using Microsoft.AspNet.Identity.Owin
+
+@{
+    ViewBag.Title = Resources.Service_cshtml_Execute_Service;
+    ViewBag.Description = Resources.Service_cshtml_Execute_Use_this_area_to_get_a_print_by_its_id_or_get_all_prints_;
+
+}
+<h2>@ViewBag.Title.</h2>
+
+<p>@ViewBag.Description</p>
+
+<div class="row">
+    <div class="col-md-12">
+        <section id="serviceForm">
+
+            <hr/>
+
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading"><h4>@Resources.ActivePrints</h4>
+                </div>
+                <!-- Table -->
+                <table class="table table-hover">
+                    <thead>
+
+                    <tr>
+                        <td>#</td>
+                        <td>@Resources.FormViewModel_Field2_Field2</td>
+                        <td>@Resources.FormViewModel_PrintPriority_Priority</td>
+                        <td>@Resources.FormViewModel_Mass_Mass__1_60_</td>
+                        <td>@Resources.PlaceInQueue</td>
+                        <td>@Resources.TimeToStart</td>
+                        <td>@Resources.User</td>
+                        <td>@Resources.Actions</td>
+
+                    </tr>
+                    </thead>
+                    @foreach (var print in MvcApplication.Queue)
+                    {
+                        var ownid = print.GetOwnerId();
+                        var usname = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(ownid).UserName;
+                        if (ownid != User.Identity.GetUserId())
+                        {
+                            if (MvcApplication.Queue.CurrentPrint.ID == print.ID)
+                            {
+
+                                <tr>
+                                    <td>@print.ID</td>
+                                    <td>@print.Title</td>
+                                    <td>@print.PrintPriority</td>
+                                    <td>@print.Mass</td>
+                                    <td>@Resources.Running</td>
+                                    <td>0 / @MvcApplication.Queue.RemainingTimeOfCurrentPrint()</td>
+                                    <td>@usname </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="@Url.Action("Details", "Home", new {id = print.ID})"><i class="fa fa-user fa-fw"></i> @Resources.Details </a>
+                                    </td>
+                                </tr>
+                            }
+                            else
+                            {
+                                var x = @MvcApplication.Queue.WaitTimeOf(print);
+                                var y = x + print.Mass*10;
+
+                                <tr>
+                                    <td>@print.ID</td>
+                                    <td>@print.Title</td>
+                                    <td>@print.PrintPriority</td>
+                                    <td>@print.Mass</td>
+                                    <td>@MvcApplication.Queue.IndexOf(print)</td>
+                                    <td>@x / @y</td>
+                                    <td>@usname</td>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <td>
+                                            <div class="btn-group">
+                                                <a class="btn btn-primary" href="@Url.Action("Details", "Home", new {id = print.ID})"><i class="fa fa-user fa-fw"></i> @Resources.Details </a>
+                                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                                    <span class="fa fa-caret-down"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="pause" data-id="@print.ID"><i class="fa fa-pause-circle fa-fw"></i> @Resources.Pause</a></li>
+                                                    <li><a class="delete" data-id="@print.ID"><i class="fa fa-trash-o fa-fw"></i> @Resources.Delete</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            <a class="btn btn-primary" href="@Url.Action("Details", "Home", new {id = print.ID})"><i class="fa fa-user fa-fw"></i> @Resources.Details </a>
+                                        </td>
+                                    }
+                                    
+                                </tr>
+                            }
+
+                        }
+                        else
+                        {
+
+                            if (MvcApplication.Queue.CurrentPrint.ID == print.ID)
+                            {
+
+
+                                <tr class="success">
+                                    <td>@print.ID</td>
+                                    <td>@print.Title</td>
+                                    <td>@print.PrintPriority</td>
+                                    <td>@print.Mass</td>
+                                    <td>@Resources.Running</td>
+                                    <td>0 / @MvcApplication.Queue.RemainingTimeOfCurrentPrint()</td>
+                                    <td>@User.Identity.Name</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="@Url.Action("Details", "Home", new {id = print.ID})"><i class="fa fa-user fa-fw"></i> @Resources.Details </a>
+                                    </td>
+                                </tr>
+                            }
+                            else
+                            {
+
+                                var x = @MvcApplication.Queue.WaitTimeOf(print);
+                                var y = x + print.Mass*10;
+
+                                <tr class="info">
+                                    <td>@print.ID</td>
+                                    <td>@print.Title</td>
+                                    <td>@print.PrintPriority</td>
+                                    <td>@print.Mass</td>
+                                    <td>@MvcApplication.Queue.IndexOf(print)</td>
+                                    <td>@x / @y </td>
+                                    <td>@User.Identity.Name</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary" href="@Url.Action("Details", "Home", new {id = print.ID})"><i class="fa fa-user fa-fw"></i> @Resources.Details </a>
+                                            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                                <span class="fa fa-caret-down"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="pause" data-id="@print.ID"><i class="fa fa-pause-circle fa-fw"></i> @Resources.Pause</a></li>
+                                                <li><a class="delete" data-id="@print.ID"><i class="fa fa-trash-o fa-fw"></i> @Resources.Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+
+
+                        }
+                    }
+
+                </table>
+            </div>
+            
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <h4>@Resources.PausedPrints</h4>
+        </div>
+        <!-- Table -->
+        <table class="table table-hover">
+            <thead>
+
+            <tr>
+                <td>#</td>
+                <td>@Resources.FormViewModel_Field2_Field2</td>
+                <td>@Resources.FormViewModel_PrintPriority_Priority</td>
+                <td>@Resources.FormViewModel_Mass_Mass__1_60_</td>
+                <td>@Resources.FormViewModel_PostedDate</td>
+                <td>@Resources.User</td>
+                <td>@Resources.Actions</td>
+
+            </tr>
+            </thead>
+            @if (User.IsInRole("Admin"))
+            {
+
+                foreach (var print in Helpers.GetAllStoppedPrints())
+                {
+                    var ownid = print.GetOwnerId();
+                    var usname = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(ownid).UserName;
+                    
+                    <tr class="warning">
+                        <td>@print.ID</td>
+                        <td>@print.Title</td>
+                        <td>@print.PrintPriority</td>
+                        <td>@print.Mass</td>
+                        <td>@print.PostedDate</td>
+                        <td>@usname</td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-primary" href="@Url.Action("Details", "Home", new {id = print.ID})"><i class="fa fa-user fa-fw"></i> @Resources.Details </a>
+                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <span class="fa fa-caret-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="continue" data-id="@print.ID"><i class="fa fa-play-circle fa-fw"></i> @Resources.Continue</a></li>
+                                    <li><a class="delete" data-id="@print.ID"><i class="fa fa-trash-o fa-fw"></i> @Resources.Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                }
+            }
+            else
+            {
+                foreach (var print in Helpers.GetUsersStoppedPrints(User.Identity.GetUserId()))
+                {
+
+                    <tr class="warning">
+                        <td>@print.ID</td>
+                        <td>@print.Title</td>
+                        <td>@print.PrintPriority</td>
+                        <td>@print.Mass</td>
+                        <td>@print.PostedDate</td>
+                        <td>@User.Identity.Name</td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-primary" href="@Url.Action("Details", "Home", new {id = print.ID})"><i class="fa fa-user fa-fw"></i> @Resources.Details </a>
+                                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <span class="fa fa-caret-down"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="continue" data-id="@print.ID"><i class="fa fa-play-circle fa-fw"></i> @Resources.Continue</a></li>
+                                    <li><a class="delete" data-id="@print.ID"><i class="fa fa-trash-o fa-fw"></i> @Resources.Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                }
+            }
+
+
+        </table>
+    </div>
+            
+            @using (Html.BeginForm("Service", "Home", FormMethod.Post, new {@class = "form-horizontal", role = "form", enctype = "multipart/form-data"}))
+            {
+                @Html.AntiForgeryToken()
+
+
+            }
+        </section>
+    </div>
+
+</div>
+@section scripts
+{
+    <script language="javascript">
+        $(function() {
+
+            $('.continue').on("click", function () {
+
+                var id = $(this).data("id");
+
+                if (confirm('Are you sure you want to continue the print with id ' + id + '?')) {
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '@Url.Action("ContinuePrint")',
+                        data: { id: id }
+                    }).done(function () {
+                        location.reload();
+                    });
+
+
+                }
+            });
+            $('.pause').on("click", function() {
+
+                var id = $(this).data("id");
+
+                if (confirm('Are you sure you want to pause the print with id ' + id + '?')) {
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '@Url.Action("PausePrint")',
+                        data: { id: id }
+                    }).done(function() {
+                        location.reload();
+                    });
+
+
+                }
+            });
+            $('.delete').on("click", function() {
+
+                var id = $(this).data("id");
+                if (confirm('Are you sure you want to delete the print with id ' + id + '?')) {
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '@Url.Action("DeletePrint")',
+                        data: { id: id }
+                    }).done(function() {
+                        location.reload();
+                    });
+                }
+            });
+        });
+    </script>
+}

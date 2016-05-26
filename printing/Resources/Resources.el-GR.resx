@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FormViewModel_ID_Please_enter_a_valid_integer_number_" xml:space="preserve">
+    <value>Παρακαλώ εισάγετε έναν έγκυρο ακέραιο αριθμό.</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="FormViewModel_Mass_Mass__1_60_" xml:space="preserve">
+    <value>Μάζα (1-60)</value>
+  </data>
+  <data name="FormViewModel_Field2_Field2" xml:space="preserve">
+    <value>Τίτλος</value>
+  </data>
+  <data name="FormViewModel_Field3_Field3" xml:space="preserve">
+    <value>Περιγραφή</value>
+  </data>
+  <data name="FormViewModel_PrintPriority_Priority" xml:space="preserve">
+    <value>Προτεραιότητα</value>
+  </data>
+  <data name="FormViewModel_File_File" xml:space="preserve">
+    <value>Αρχείο (.PNG)</value>
+  </data>
+  <data name="Service_cshtml_Execute_Service" xml:space="preserve">
+    <value>Σύνοψη εκτυπώσεων</value>
+  </data>
+  <data name="Service_cshtml_Execute_Use_this_area_to_get_a_print_by_its_id_or_get_all_prints_" xml:space="preserve">
+    <value>Χρησιμοποίησε αυτήν την περιοχή για να δεις λεπτομέριες των ενεργών εκτυπώσεών σου.</value>
+  </data>
+  <data name="Get" xml:space="preserve">
+    <value>Λήψη</value>
+  </data>
+  <data name="Get_All_Prints" xml:space="preserve">
+    <value>Λήψη όλων των ολοκληρωμένων εκτυπώσεων σε XML</value>
+  </data>
+  <data name="Please_Fill_The_Boxes_Below" xml:space="preserve">
+    <value>Παρακαλώ συμπληρώστε την φόρμα κάτω.</value>
+  </data>
+  <data name="HomeController_Form_Print_successfully_saved__You_can_invoke_the_Service_with_your_ID__" xml:space="preserve">
+    <value>Η εκτύπωση αποθηκεύτηκε με επιτυχία! Στείλαμε στο email σας πληροφορίες για την εκτύπωση σας.</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Ιστορικό Εκτυπώσεων</value>
+  </data>
+  <data name="HomeController_Form_An_error_occurred_with_form_validation__Please_try_again_" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα κατά την επικύρωση της φόρμας. Παρακαλώ προσπάθησε ξανά.</value>
+  </data>
+  <data name="Form_cshtml_Execute_Form" xml:space="preserve">
+    <value>Φόρμα εκτύπωσης</value>
+  </data>
+  <data name="Form_cshtml_Execute_Use_this_area_to_insert_a_print_" xml:space="preserve">
+    <value>Χρησιμοποίησε αυτήν την περιοχή για να προσθέσεις μία εκτύπωση.</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Έγινε</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Αποσύνδεση</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>3D Printing</value>
+  </data>
+  <data name="_LoginPartial_cshtml_Execute_Register" xml:space="preserve">
+    <value>Εγγραφή</value>
+  </data>
+  <data name="_LoginPartial_cshtml_Execute_Log_in" xml:space="preserve">
+    <value>Είσοδος</value>
+  </data>
+  <data name="Error_cshtml_Execute_Error" xml:space="preserve">
+    <value>Πρόβλημα</value>
+  </data>
+  <data name="Error_cshtml_Execute_An_error_occurred_while_processing_your_request_" xml:space="preserve">
+    <value>Ένα πρόβλημα δημιουργήθηκε κατά την επεξεργασία του αιτήματός σας.</value>
+  </data>
+  <data name="Index_cshtml_Execute_Home_Page" xml:space="preserve">
+    <value>Αρχική</value>
+  </data>
+  <data name="ClickTheFormAboveToGetStarted" xml:space="preserve">
+    <value>Κλίκαρε το "Φόρμα Εκτύπωσης" πάνω για να ξεκινήσεις.</value>
+  </data>
+  <data name="CreateANewAccount" xml:space="preserve">
+    <value>Δημιούργησε έναν νέο λογαριασμό.</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Γεια σου</value>
+  </data>
+  <data name="RegisterAsANewUser" xml:space="preserve">
+    <value>Εγγραφή σαν νέος χρήστης</value>
+  </data>
+  <data name="Stranger" xml:space="preserve">
+    <value>φίλε</value>
+  </data>
+  <data name="ToContinue" xml:space="preserve">
+    <value>για να συνεχίσεις.</value>
+  </data>
+  <data name="UseALocalAccountToLogIn" xml:space="preserve">
+    <value>Χρησιμοποίησε έναν τοπικό κωδικό για να συνδεθείς.</value>
+  </data>
+  <data name="LoginViewModel_Email_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="LoginViewModel_Password_Password" xml:space="preserve">
+    <value>Κωδικός</value>
+  </data>
+  <data name="LoginViewModel_RememberMe_Remember_me_" xml:space="preserve">
+    <value>Να με θυμάσαι</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>ή</value>
+  </data>
+  <data name="RegisterViewModel_ConfirmPassword_Confirm_password" xml:space="preserve">
+    <value>Επιβεβαίωση κωδικού</value>
+  </data>
+  <data name="RegisterViewModel_ConfirmPassword_The_password_and_confirmation_password_do_not_match_" xml:space="preserve">
+    <value>Ο κωδικός και η επιβεβαίβωση του δεν ταιριάζουν.</value>
+  </data>
+  <data name="RegisterViewModel_Password_The__0__must_be_at_least__2__characters_long_" xml:space="preserve">
+    <value>Ο {0} πρέπει να είναι τουλάχιστον {2} χαρακτήρων.</value>
+  </data>
+  <data name="HistoryDescription" xml:space="preserve">
+    <value>Χρησιμοποίησε αυτήν την περιοχή για να δεις το ιστορικό των εκτυπώσεών σου.</value>
+  </data>
+  <data name="FileError" xml:space="preserve">
+    <value>Υπήρξε πρόβλημα με το επιλεγμένο αρχείο. Παρακαλώ επιλέξτε ένα σωστό .PNG αρχείο.</value>
+  </data>
+  <data name="ActivePrints" xml:space="preserve">
+    <value>Ενεργές Εκτυπώσεις</value>
+  </data>
+  <data name="CompletedPrints" xml:space="preserve">
+    <value>Ολοκληρωμένες Εκτυπώσεις</value>
+  </data>
+  <data name="PlaceInQueue" xml:space="preserve">
+    <value>Θέση στην ουρά</value>
+  </data>
+  <data name="Running" xml:space="preserve">
+    <value>Εκτελείται</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Ενέργειες</value>
+  </data>
+  <data name="TimeToStart" xml:space="preserve">
+    <value>Ξεκινάει σε / Υπολείπονται (λεπτά)</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Λεπτομέριες</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Παύση</value>
+  </data>
+  <data name="Forgotyourpassword" xml:space="preserve">
+    <value>Ξέχασες τον κωδικό σου;</value>
+  </data>
+  <data name="PausedPrints" xml:space="preserve">
+    <value>Σταματημένες Εκτυπώσεις</value>
+  </data>
+  <data name="FormViewModel_PostedDate" xml:space="preserve">
+    <value>Ημερομηνία Καταχώρησης</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Συνέχεια</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Χρήστης</value>
+  </data>
+  <data name="GetPrintAsXML" xml:space="preserve">
+    <value>Λήψη της εκτύπωσης σε XML</value>
+  </data>
+  <data name="Demo" xml:space="preserve">
+    <value>Service Demo</value>
+  </data>
+</root>

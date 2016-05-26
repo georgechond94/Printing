@@ -1,0 +1,85 @@
+﻿@using printing.Models
+@using printing.Enums
+@using printing.Resources
+
+@model PrintViewModel
+@{
+    ViewBag.Title = Resources.Form_cshtml_Execute_Form;
+    ViewBag.Description = Resources.Form_cshtml_Execute_Use_this_area_to_insert_a_print_;
+}
+<h2>@ViewBag.Title.</h2>
+
+<p>@ViewBag.Description</p>
+@if (Model != null && Model.SuccessMessage != null)
+{
+    if (Model.SuccessMessage == true)
+    {
+        <div class="row">
+            @Html.Raw("<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>" + @Model.Message + "</div>")
+        
+        </div>
+    }
+    if (Model.SuccessMessage == false)
+    {
+        <div class="row">
+            @Html.Raw("<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>" + @Model.Message + "</div>")
+
+        </div>
+    }
+}
+    <div class="row">
+        <div class="col-md-12">
+            <section id="loginForm">
+                @using (Html.BeginForm("Form", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+            {
+                    @Html.AntiForgeryToken()
+                    <h4>@Resources.Please_Fill_The_Boxes_Below</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Title, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Description, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Mass, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Mass, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Mass, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.PrintPriority, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(m => m.PrintPriority, new SelectList(new List<Priority> { Priority.LOW, Priority.HIGH }), new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.PrintPriority, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.File, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            <input type="file" name="File" accept="image/png" />
+                            @Html.ValidationMessageFor(m => m.File, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="@Resources.Done" class="btn btn-default" />
+                        </div>
+                    </div>
+
+                }
+            </section>
+        </div>
+
+    </div>

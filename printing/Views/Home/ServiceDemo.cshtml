@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Service Demo";
+    ViewBag.Message = "XML RESTful";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active">
+            <a href="#serviceQueue" data-toggle="tab">
+                Queue
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#AllQueue" data-toggle="tab">
+                All Prints
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#UserQueue" data-toggle="tab">
+                Prints by User
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-pane fade in active" id="serviceQueue">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Request
+            </div>
+            <div class="panel-body">
+                @ViewBag.Requestq
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                Response Body
+            </div>
+            <div class="panel-body">
+                @ViewBag.Bodyq
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="AllQueue">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Request
+            </div>
+            <div class="panel-body">
+                @ViewBag.Requestp
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                Response Body
+            </div>
+            <div class="panel-body">
+                @ViewBag.Bodyp
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="UserQueue">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Request
+            </div>
+            <div class="panel-body">
+                @ViewBag.Requestu
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                Response Body
+            </div>
+            <div class="panel-body">
+                @ViewBag.Bodyu
+            </div>
+        </div>
+
+    </div>
+        </div>
+</div>

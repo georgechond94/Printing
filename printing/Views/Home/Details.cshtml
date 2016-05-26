@@ -1,0 +1,102 @@
+﻿@using printing.Models
+@using printing.Resources
+@model printing.Models.PrintViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.Description = Model.Description;
+
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>@ViewBag.Description</h4>
+    <hr/>
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrintPriority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrintPriority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stopped)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stopped)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Finished)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Finished)
+        </dd>
+
+    </dl>
+</div>
+@using (Html.BeginForm("PrintXML", "Home", new { id = Model.ID }, FormMethod.Post, new {@class = "form-horizontal", role = "form", enctype = "multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+    <hr/>
+    <h4>@Resources.GetPrintAsXML</h4>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="@Resources.Get" class="btn btn-default"/>
+        </div>
+    </div>
+}
